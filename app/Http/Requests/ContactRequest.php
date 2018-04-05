@@ -12,7 +12,7 @@ class ContactRequest extends FormRequest {
         return [
                 'name' => 'required|min:3',
                 'email' => 'required|email|unique:users',
-                'mobile' => 'required|integer|min:1000000000|max:9999999999',
+                'mobile' => 'required|integer|unique:users|min:1000000000|max:9999999999',
                 'address' => 'required|max:250'
                 ];
     }
