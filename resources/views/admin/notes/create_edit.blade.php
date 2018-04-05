@@ -22,7 +22,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="name">Note Title</label>
-                                <input type="text" class="form-control" tabindex="1" placeholder="Title" name="title" value="@if(isset($note)) {{$note->name}} @endif" required>
+                                <input type="text" class="form-control" tabindex="1" placeholder="Title" name="title" value="@if(isset($note)) {{$note->title}} @endif" required>
                             </div>
                         </div>
                         <div class="col-md-6">

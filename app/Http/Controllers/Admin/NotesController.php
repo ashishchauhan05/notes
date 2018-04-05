@@ -47,7 +47,7 @@ class NotesController extends AdminController {
                 'messages' => array('New note successfully created')
                 );
         
-        return redirect('admin/notes/'.$note->id.'/edit')->with('status', $status);
+        return redirect('admin/note/'.$note->id.'/edit')->with('status', $status);
     }
 
     public function getEdit($id)
