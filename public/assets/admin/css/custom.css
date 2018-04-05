@@ -1,0 +1,44 @@
+.form-group.has-error .error-label {
+    font-size:10px;
+    font-weight: 500;
+}
+
+.icon-arrow-left:before {
+    content: "\e079";
+}
+.icon-arrow-right:before {
+    content: "\e080";
+}
+
+.has-error {
+    border-color: #dd4b39;
+}
+
+.form-group.has-success .success-label {
+    font-size:10px;
+    font-weight: 500;
+}
+.has-success {
+    border-color: #008d4c;
+}
+
+.cart-service {
+    font-size:10px;
+}
+
+.cart-total-amount {
+    font-size:30px;
+}
+
+ul.slides-prices {
+    list-style: none;
+    margin-left: 0;
+    padding-left:0px;
+    margin-top: 10px;
+}
+.slides-prices li {
+    float: left;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+    width: 100%;
+}

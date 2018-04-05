@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /fetch/services
+Disallow: /contactFormCollector
+Disallow: /booking/coupon_discount
+Disallow: /wordpress
+Disallow: /checkout/*
+sitemap: /sitemap
