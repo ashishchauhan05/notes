@@ -33,13 +33,13 @@
 
             <li class="@if ($menu_id=='menu_lng') active @endif treeview" id="menu_lng">
                 <a href="/admin/lng">
-                    <i class="fa fa-link"></i> <span>Language</span>
+                    <i class="fa fa-language"></i> <span>Language</span>
                 </a>
             </li>
 
              <li class="@if ($menu_id=='menu_contacts') active @endif treeview" id="menu_contacts">
                 <a href="/admin/contacts">
-                    <i class="fa fa-marker"></i> <span>Contacts</span>
+                    <i class="fa fa-book"></i> <span>Contacts</span>
                 </a>
             </li>
 
