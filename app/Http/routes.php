@@ -28,12 +28,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Auth'], function() {
     Route::post('auth/login', 'AdminAuthController@postLogin');
 });
 
-Route::group(['prefix' => 'api/v1', 'namespace' => 'API'], function() {
+Route::group(['prefix' => 'api', 'namespace' => 'API'], function() {
    
-    Route::get('users', 'UserController@showList');
-
-    Route::post('customer/reset','CustomerController@reset');
-    Route::post('customer/verify','CustomerController@verifyCustomer');
+    Route::get('scrape', 'ScrapeController@fetchLinks');
+    Route::get('lng', 'LngController@index');    
+    Route::post('contact/create','ContactsController@postCreate');
 });
 
 
@@ -56,6 +55,10 @@ Route::group(['prefix' => 'admin', 'roles' => ['admin','user'], 'middleware' => 
     Route::post('note/{id}/comment', 'NotesController@postComment');
     Route::get('notes/data', 'NotesController@data');
 
+    Route::get('scrape','ScrapeController@index');
+    Route::get('lng','LngController@index');
+    Route::get('contacts','ContactsController@index');
+
 });
 
 
@@ -75,10 +78,5 @@ Route::group(['prefix' => 'admin', 'roles' => ['admin'], 'middleware' => 'auth',
     Route::post('users/{id}/edit', 'UserController@postEdit');
     Route::get('users/{id}/delete', 'UserController@getDelete');
     Route::post('users/{id}/delete', 'UserController@postDelete');
-
-    Route::post('config/variable/create','ConfigController@postCreateVariable');
-    Route::post('config/variable/{id}/edit','ConfigController@postEditVariable');
-    Route::post('config/variable/{id}/option/create','ConfigController@postVariableOptionCreate');
-    Route::post('config/variable/{parent_id}/option/{id}/edit','ConfigController@postVariableOptionEdit');
 
 });

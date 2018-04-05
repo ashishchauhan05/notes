@@ -24,7 +24,26 @@
                     <i class="fa fa-edit"></i> <span>Notes</span>
                 </a>
             </li>
-            @if(Auth::user()->hasRole(['admin','editor']))
+
+            <li class="@if ($menu_id=='menu_scrape') active @endif treeview" id="menu_scrape">
+                <a href="/admin/scrape">
+                    <i class="fa fa-link"></i> <span>Scrape</span>
+                </a>
+            </li>
+
+            <li class="@if ($menu_id=='menu_lng') active @endif treeview" id="menu_lng">
+                <a href="/admin/lng">
+                    <i class="fa fa-link"></i> <span>Language</span>
+                </a>
+            </li>
+
+             <li class="@if ($menu_id=='menu_contacts') active @endif treeview" id="menu_contacts">
+                <a href="/admin/contacts">
+                    <i class="fa fa-marker"></i> <span>Contacts</span>
+                </a>
+            </li>
+
+            @if(Auth::user()->hasRole(['admin']))
                 <li class="@if ($menu_id=='menu_admin') active @endif treeview" id="menu_admin">
                     <a href="#">
                         <i class="fa fa-user"></i> <span>Admin</span>

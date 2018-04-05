@@ -10,10 +10,10 @@ class ContactRequest extends FormRequest {
     */
     public function rules() {
         return [
-                'name' => 'required',
-                'ContactEmail' => 'required',
-                'ContactNumber' => 'required',
-                'ContactPurpose' => 'required'
+                'name' => 'required|min:3',
+                'email' => 'required|email|unique:users',
+                'mobile' => 'required|integer|min:1000000000|max:9999999999',
+                'address' => 'required|max:250'
                 ];
     }
     
